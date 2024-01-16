@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Symbolic Differentiation WebApp</title>
+</head>
+<body>
+    <h1>Symbolic Differentiation WebApp</h1>
+    <form method="post" action="/">
+        <label for="input_function">Enter a function to differentiate:</label>
+        <input type="text" id="input_function" name="input_function" required>
+        <button type="submit">Differentiate</button>
+    </form>
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result | safe }}</p>
+    {% endif %}
+</body>
+</html>
