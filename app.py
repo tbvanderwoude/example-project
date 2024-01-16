@@ -27,6 +27,6 @@ def index():
 
     return render_template("index.html", result=result_str)
 
-
+# Runs the app if the module is run as a script
 if __name__ == "__main__":
     app.run(debug=True)
